@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ItemDescriptionActivity"
+    tools:showIn="@layout/activity_item_description">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/item_desc_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/item_desc_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A4"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_margin="6dp"
+            android:layout_below="@id/item_desc_img"
+            />
+
+        <TextView
+            android:id="@+id/item_decs_cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audi Sedan"
+            android:textSize="22dp"
+            android:layout_alignBaseline="@id/item_desc_name"
+            android:layout_toRightOf="@id/item_desc_name"/>
+
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/item_list"
+            android:layout_margin="8dp"
+            android:layout_below="@id/item_desc_name"
+            android:textSize="18dp"
+            android:text="Audi A4 is a sedan"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:layout_below="@id/item_description"></com.github.mikephil.charting.charts.PieChart>
+
+    </RelativeLayout>
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
